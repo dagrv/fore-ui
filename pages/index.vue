@@ -1,5 +1,9 @@
 <template>
-  <p>Home</p>
+  <div class="section">
+    <div class="container is-fluid">
+      Home
+    </div>
+  </div>
 </template>
 
 <script>
