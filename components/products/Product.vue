@@ -18,7 +18,7 @@
       <div class="content">
         <p v-if="product.description">{{ product.description }}</p>
 
-        <span class="tag is-rounded is-large is-info is-light">price</span>
+        <span class="tag is-rounded is-large is-info is-light">{{ product.price }}</span>
       </div>
     </div>
   </div>
