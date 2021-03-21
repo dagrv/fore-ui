@@ -6,8 +6,12 @@
       <div class="select is-fullwidth">
         <select name="" id="">
           <option value="">Choose option</option>
-          <option v-for="variation in variations" :key="variation.id">
+          <option v-for="variation in variations" :key="variation.id" :value="variation.id">
             {{ variation.name }}
+
+            <template v-if="variation.price_varies">
+              ({{ variation.price }})
+            </template>
           </option>
         </select>
       </div>
