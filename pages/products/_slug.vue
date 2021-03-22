@@ -9,9 +9,18 @@
                 <div class="column is-half">
                     <section class="section">
                         <h1 class="title is-4">{{ product.name }}</h1>
+                        
                         <p v-if="product.description">{{ product.description }}</p>
+                        
                         <hr>
-                        <span class="tag is-rounded is-large is-info is-light">{{ product.price }}</span>
+                        
+                        <span class="tag is-rounded is-large is-danger is-light" v-if="!product.in_stock">
+                          Sold out
+                        </span>
+                        
+                        <span class="tag is-rounded is-large is-info is-light">
+                          {{ product.price }}
+                        </span>
                     </section>
 
                     <section class="section">
