@@ -36,7 +36,7 @@
                           </div>
 
                           <div class="control">
-                            <button type="submit" class="button is-success is-rounded is-medium">Add to Cart</button>
+                            <button type="submit" class="button is-success is-medium is-fullwidth">Add to Cart</button>
                           </div>
                         </div>
                       </form>

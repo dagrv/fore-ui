@@ -6,10 +6,17 @@
       <div class="select is-fullwidth">
         <select :value="selectedVariationId" @change="changed($event, type)">
           <option value="">Choose option</option>
-          <option v-for="variation in variations" :key="variation.id" :value="variation.id">
-            {{ variation.name }}
+          <option v-for="variation in variations" 
+            :key="variation.id" 
+            :value="variation.id"
+            :disabled="!variation.in_stock">
+              {{ variation.name }}
             <template v-if="variation.price_varies">
               ({{ variation.price }})
+            </template>
+
+            <template v-if="!variation.in_stock">
+              (Sold out)
             </template>
           </option>
         </select>
@@ -40,7 +47,6 @@
         if (!this.findVariation(this.value.id)) {
           return ''
         }
-
         return this.value.id
       }
     },
@@ -56,7 +62,6 @@
         if (typeof variation === 'undefined') {
           return null
         }
-
         return variation
       }
     }
