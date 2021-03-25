@@ -15,7 +15,8 @@ module.exports = {
   },
 
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/auth'
   ],
 
   axios: {
@@ -26,19 +27,32 @@ module.exports = {
     '~assets/styles/app.scss'
   ],
 
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: 'auth/login',
+            method: 'post',
+            propertyName: 'meta.token'
+          },
+          user: {
+            url: 'auth/me',
+            method: 'get',
+            propertyName: 'data'
+          }
+        }
+      }
+    }
+  },
 
-  /*
-  ** Customize the progress bar color
-  */
   loading: { color: '#3B8070' },
-  /*
-  ** Build configuration
-  */
+
   build: {
     /*
     ** Run ESLint on save
     */
-    extend (config, { isDev, isClient }) {
+    extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
