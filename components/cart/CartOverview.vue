@@ -10,9 +10,7 @@
             <tr>
                 <td></td>
                 <td></td>
-                <td>
-                    <p class="is-size-4 mt-1">Subtotal</p>
-                </td>
+                <td><p class="is-size-4 mt-1">Subtotal</p></td>
                 <td class="has-text-weight-bold is-size-5">{{ subtotal }}</td>
                 <td></td>
             </tr>
