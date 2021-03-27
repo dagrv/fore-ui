@@ -4,7 +4,7 @@
             <img src="http://via.placeholder.com/80x80" alt="placeholder">
         </td>
 
-        <td class="is-size-5">{{ product.product.name }} — {{ product.name }}</td>
+        <td class="is-size-5">{{ product.product.name }} — {{ product.type }} / {{ product.name }}</td>
         
         <td width="160">
             <div class="field">
