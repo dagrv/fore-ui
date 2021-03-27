@@ -9,7 +9,7 @@
                         <CartOverview />
                     </article>
 
-                    <a href="#" class="button is-fullwidth is-medium is-info is-success">
+                    <a href="#" class="button is-fullwidth is-medium is-info is-success is-size-5 has-text-weight-semibold">
                         Buy
                     </a>
                 </div>
