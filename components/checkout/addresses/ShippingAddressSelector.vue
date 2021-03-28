@@ -1,5 +1,5 @@
 <template>
-    <table class="table is-hoverable is-fullwidth">
+    <table class="table is-hoverable is-fullwidth is-striped">
         <tbody>
             <tr v-for="address in addresses" :key="address.id">
                 <td>
