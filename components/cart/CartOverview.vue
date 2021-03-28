@@ -14,6 +14,7 @@
                 <td class="has-text-weight-bold is-size-5">{{ subtotal }}</td>
                 <td></td>
             </tr>
+            <slot name="rows" />
         </tbody>
     </table>
 </template>

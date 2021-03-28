@@ -11,9 +11,9 @@
 
                     <h1 v-else class="is-size-3 has-text-centered mt-6">Your cart is empty</h1>
 
-                    <a href="#" v-if="!empty" class="button is-fullwidth is-success is-size-4 has-text-weight-semibold">
+                    <nuxt-link :to="{name: 'checkout'}" v-if="!empty" class="button is-fullwidth is-success is-size-4 has-text-weight-semibold">
                         Buy
-                    </a>
+                    </nuxt-link>
                 </div>
             </div>
         </div>
